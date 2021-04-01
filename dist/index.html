@@ -3,7 +3,52 @@
     <title>Hologram Shader Demo</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/dat.gui"></script>
     <script src="main.js"></script>
+
+    <script type="text/javascript">
+      window.onload = function () {
+        let gui = new dat.GUI();
+
+        let params = {
+          numScanLines: 150,
+          scanLineDrift: 0.03,
+          saturation: 0.8,
+          alpha: 0.8,
+          glitchOffset: 0.01,
+          numGlitchBars: 6,
+          glitchBarDrift: 0.02,
+          glitchRate: 10,
+          rgbSeparation: 0.03,
+        };
+
+        function setParams() {
+          let hologram = document.getElementById("hologram");
+          hologram.setAttribute("material", params);
+        }
+
+        let ranges = {
+          numScanLines: { min: 0, max: 200, step: 1 },
+          scanLineDrift: { min: 0, max: 0.1, step: 0.01 },
+          saturation: { min: 0, max: 1, step: 0.01 },
+          alpha: { min: 0, max: 1, step: 0.01 },
+          glitchOffset: { min: 0, max: 0.2, step: 0.01 },
+          rgbSeparation: { min: 0, max: 0.2, step: 0.01 },
+          numGlitchBars: { min: 0, max: 20, step: 1 },
+          glitchBarDrift: { min: 0, max: 0.1, step: 0.01 },
+          glitchRate: { min: 0, max: 100, step: 0.01 },
+        };
+
+        for (let name in ranges) {
+          gui
+            .add(params, name)
+            .min(ranges[name].min)
+            .max(ranges[name].max)
+            .step(ranges[name].step)
+            .onChange(setParams);
+        }
+      };
+    </script>
   </head>
   <body style="background-color: black">
     <a-scene>
@@ -14,7 +59,7 @@
         id="hologram"
         src="#demo"
         position="-0.5 1.6 -2"
-        material="shader: hologram; alpha: 0.8"
+        material="shader: hologram"
       ></a-video>
       <a-video src="#demo" position="0.5 1.6 -2"></a-video>
       <a-entity

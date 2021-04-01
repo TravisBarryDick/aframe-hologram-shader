@@ -1,5 +1,3 @@
-import "aframe";
-
 /**
  * This string template literal does not modify the input string, but allows us
  * to tag some strings as glsl snippets so that editors (e.g., VSCode) can
