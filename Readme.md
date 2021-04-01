@@ -14,7 +14,11 @@ This shader corrupts an image or video texture to make it look like a hologram. 
 1. Scan lines (dark horizontal lines) are drawn on the image. These scanlines slowly drift down the hologram.
 1. Glitch effect: The texture is broken up vertically into equal-height "glitch bars". Each glitch bar is randomly shifted horizontally to create a jittering effect. After the horizontal shift, each of the RGBA components of the glitch bar are further randomly shifted to create a "glitch" effect. The boundaries between glitch bars slowly drift down the hologram.
 
-This component was developed in partnership with Planet Voodoo&reg; (Voodoo LLC) as part of their 'WebXR Wizardry' initiative.
+This component was developed in partnership with <a href="https://planetvoodoo.org/">Planet Voodoo&reg;</a> (Voodoo LLC) as part of their 'WebXR Wizardry' initiative.
+
+<p align="center">
+  <a href="https://planetvoodoo.org/"><img src="planet-voodoo-logo.png" width="150px" /></a>
+</p>
 
 ## Configurable Parameters
 

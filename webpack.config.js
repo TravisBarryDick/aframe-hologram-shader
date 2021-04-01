@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   entry: "./src/index.js",
-  mode: "development",
+  mode: "production",
   devtool: "inline-source-map",
   devServer: {
     host: "0.0.0.0",
