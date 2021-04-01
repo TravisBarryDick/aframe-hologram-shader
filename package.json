@@ -1,0 +1,21 @@
+{
+  "name": "aframe-hologram-shader",
+  "version": "1.0.0",
+  "description": "An A-Frame shader for creating stylized holograms from images and videos",
+  "main": "dist/main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TravisBarryDick/aframe-hologram-shader.git"
+  },
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve --open"
+  },
+  "author": "Travis Dick <travis.barry.dick@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "aframe": "^1.2.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

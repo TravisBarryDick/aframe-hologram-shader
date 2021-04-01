@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Hologram Shader Demo</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body style="background-color: black">
+    <a-scene>
+      <a-assets timeout="20000">
+        <img id="demo" src="demo.png" crossorigin="anonymous" />
+      </a-assets>
+      <a-video
+        id="hologram"
+        src="#demo"
+        position="-0.5 1.6 -2"
+        material="shader: hologram; alpha: 0.8"
+      ></a-video>
+      <a-video src="#demo" position="0.5 1.6 -2"></a-video>
+      <a-entity
+        environment="preset: checkerboard; dressingAmount: 100"
+      ></a-entity>
+    </a-scene>
+  </body>
+</html>
