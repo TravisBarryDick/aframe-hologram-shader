@@ -1,8 +1,8 @@
 {
   "name": "aframe-hologram-shader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An A-Frame shader for creating stylized holograms from images and videos",
-  "main": "dist/main.js",
+  "main": "dist/aframe-hologram-shader.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/TravisBarryDick/aframe-hologram-shader.git"

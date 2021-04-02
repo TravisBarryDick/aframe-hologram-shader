@@ -11,7 +11,7 @@ module.exports = {
     contentBase: "./dist",
   },
   output: {
-    filename: "main.js",
+    filename: "aframe-hologram-shader.js",
     path: path.resolve(__dirname, "dist"),
     library: {
       name: "aframeHologramShader",
