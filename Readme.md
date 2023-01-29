@@ -76,11 +76,3 @@ The following parameters can be used to customize the effect. You can play with 
 | glitchBarDrift | float | Similar to the scan line drift, except it causes the boundaries of the glitch bars to move.                                                                                         |
 | rgbSeparation  | float | Similar to glitchOffset, except this is the maximum shift for each of the RGBA components.                                                                                          |
 | glitchRate     | float | How many times per second to update the glitch effect.                                                                                                                              |
-
----
-
-This component was developed in partnership with <a href="https://planetvoodoo.org/">Planet Voodoo&reg;</a> (Voodoo LLC) as part of their 'WebXR Wizardry' initiative.
-
-<p align="center">
-  <a href="https://planetvoodoo.org/"><img src="planet-voodoo-logo.png" width="150px" /></a>
-</p>
